@@ -4,9 +4,8 @@ plugins {
     id("io.spring.dependency-management") version "1.1.0"
 }
 
-group = "faang.school"
-version = "1.0"
-java.sourceCompatibility = JavaVersion.VERSION_17
+group = "org.example"
+version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
