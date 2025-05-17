@@ -1,0 +1,41 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: user
+    password: password
+
+  data:
+    redis:
+      port: 6379
+      host: localhost
+      channels:
+        subscription:
+          subscribed:
+            name: subscribed
+          unsubscribed:
+            name: unsubscribed
+        user:
+          user_retrieved:
+            name: user_retrieved
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+
+messages:
+  basename: messages
+
+logging:
+  level:
+    root: info
+
+client:
+  skip_event:
+    header: X-Skip-Event
+  user-service:
+    name: user-service
+    host: localhost
+    port: 8080
+    base-path: /api/users
+
+server:
+  port: 8083

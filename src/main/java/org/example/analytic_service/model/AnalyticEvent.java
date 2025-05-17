@@ -11,6 +11,7 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
@@ -20,8 +21,9 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name="analytics_event")
-public class AnalyticsEvent {
+@Table(name="analytic_events")
+@EqualsAndHashCode
+public class AnalyticEvent {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

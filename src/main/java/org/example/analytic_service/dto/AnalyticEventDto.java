@@ -13,11 +13,11 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class AnalyticsEventDto {
+public class AnalyticEventDto {
     private long id;
     private long receiverId;
     private long actorId;
     private EventType eventType;
-    @JsonFormat(pattern = "YYYY-MM-DD hh:mm:ss")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS")
     private LocalDateTime receivedAt;
 }
