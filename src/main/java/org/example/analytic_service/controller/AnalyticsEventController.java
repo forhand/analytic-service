@@ -23,6 +23,5 @@ public class AnalyticsEventController {
     List<AnalyticEventDto> analytics = service.getAnalytics(filters);
     System.out.println(analytics);
     return analytics;
-//        return service.getAnalytics(filters);
   }
 }
